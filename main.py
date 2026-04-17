@@ -25,7 +25,11 @@ app = FastAPI(title="AuctionEdge API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:3000",
+        "http://localhost:5173",
+        "https://aesthetic-cocada-285b16.netlify.app/",  # ← add this
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
